@@ -12,12 +12,10 @@ function FooterContact() {
                 <p className="contact-title-2 fontCoco">ME</p>
             </h3>
             <div className="contact-cont">
-                <a href="pages/contact.html">
+               <Link to="/contact">
                     <span className="contact-more">SEE MORE</span>
-                    <span className="contact-arrow">
-                        <img src="/img/contact-arrow.svg"></img>
-                    </span>
-                </a>
+                    <span className="contact-arrow"></span>
+                </Link>
             </div>
         </div>
     </section>

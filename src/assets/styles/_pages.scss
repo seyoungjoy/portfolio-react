@@ -243,16 +243,15 @@
   }
 }
 
-// .introduceTab .tab-content .text-right::before{
-//   content:"";
-//   display: block;
-//   width:20px;
-//   height:20px;
-//   background: center / contain no-repeat url(../img/about-arrow.svg);
-//   position: absolute;
-//   top:0;
-//   left:-36px;
-// }
+.introduceTab .tab-content .text-right .about-arrow img{
+  display: block;
+  width:20px;
+  height:20px;
+  position: absolute;
+  top:0;
+  left:-36px;
+}
+
 .notice{
   color:#555;
   text-decoration: underline;
@@ -275,6 +274,7 @@
   color:#fff;
   line-height: 0.8;
   position: relative;
+  z-index:100;
 }
 .story-line{
   display: block;
@@ -301,14 +301,15 @@
 //   transform: translateY(-100px);
 //   cursor:none;
 // }
-.swiper-wrapper{
+.swiper-container{
   margin-top:-20px;
-  display: flex; 
+  position: relative;
+  z-index:10;
 }
+
 .swiper-wrapper img{
   height:500px;
   object-fit: cover;
-  /* margin:0 5px; */
 }
 .swiper-slide{
   height:500px;

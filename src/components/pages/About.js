@@ -3,8 +3,8 @@ import Header from '../Header';
 import FooterContact from '../FooterContact';
 import Footer from '../Footer';
 import { Link } from "react-router-dom";
-
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/swiper.scss';
 
 
 function About(){
@@ -124,9 +124,14 @@ function About(){
                                                 저를 움직이는 원동력입니다.&#128526;
                                             </p>
                                             <p className="text-right">
-                                                No matter how difficult it is, I feel a sense of accomplishment when I
-                                                see a
-                                                website that is completed one by one.
+                                                <span className="about-arrow">
+                                                    <img src="/img/about-arrow.svg" />
+                                                </span>
+                                                <span>
+                                                    No matter how difficult it is, I feel a sense of accomplishment when I
+                                                    see a
+                                                    website that is completed one by one.
+                                                </span>
                                             </p>
                                         </div>
                                         <div id="tabs-2" className="tabs clearfix">
@@ -134,9 +139,13 @@ function About(){
                                                 ENFJ 입니다.&#129392;
                                             </p>
                                             <p className="text-right">
-                                                My MBTI is a bright and caring ENFJ. Warm, active, responsible, sociable
-                                                and
-                                                compassionate.
+                                                <span className="about-arrow">
+                                                    <img src="/img/about-arrow.svg" />
+                                                </span>
+                                                <span>
+                                                    My MBTI is a bright and caring ENFJ. Warm, active, responsible, sociable
+                                                    and compassionate.
+                                                </span>
                                             </p>
                                         </div>
                                         <div id="tabs-3" className="tabs clearfix">
@@ -146,9 +155,13 @@ function About(){
                                                 &#128221;
                                             </p>
                                             <p className="text-right">
-                                                Every morning I make a plan for the day. No matter what happens, I tend
-                                                to act
-                                                in a planned manner.
+                                                <span className="about-arrow">
+                                                    <img src="/img/about-arrow.svg" />
+                                                </span>
+                                                <span>
+                                                    Every morning I make a plan for the day. No matter what happens, I tend
+                                                    to act in a planned manner.
+                                                </span>
                                             </p>
                                         </div>
                                         <div id="tabs-4" className="tabs clearfix">
@@ -156,9 +169,13 @@ function About(){
                                                 코딩 공부를 즐깁니다.&#128187;
                                             </p>
                                             <p className="text-right">
-                                                I am interested in self-development and enjoy studying coding. Learning
-                                                new
-                                                things is always fun.
+                                                <span className="about-arrow">
+                                                    <img src="/img/about-arrow.svg" />
+                                                </span>
+                                                <span>
+                                                    I am interested in self-development and enjoy studying coding. Learning
+                                                    new things is always fun.
+                                                </span>
                                             </p>
                                         </div>
                                         <div id="tabs-5" className="tabs clearfix">
@@ -166,8 +183,13 @@ function About(){
                                                 체력 관리를 하고있습니다.&#128170;
                                             </p>
                                             <p className="text-right">
-                                                I exercise 4 times a week and manage my stamina. Because you have to be
-                                                physically fit to study.
+                                                <span className="about-arrow">
+                                                    <img src="/img/about-arrow.svg" />
+                                                </span>
+                                                <span>
+                                                    I exercise 4 times a week and manage my stamina. Because you have to be
+                                                    physically fit to study.
+                                                </span>
                                             </p>
                                         </div>
                                         <div id="tabs-6" className="tabs clearfix">
@@ -175,7 +197,12 @@ function About(){
                                                 코딩왕&#128081;
                                             </p>
                                             <p className="text-right">
-                                                내가 원하는 것들은 모두 구현할 수 있는 수준의 코딩실력을 갖추고 싶습니다. 그것이 진정 코딩왕이 아닐까요?
+                                                <span className="about-arrow">
+                                                    <img src="/img/about-arrow.svg" />
+                                                </span>
+                                                <span>
+                                                    내가 원하는 것들은 모두 구현할 수 있는 수준의 코딩실력을 갖추고 싶습니다. 그것이 진정 코딩왕이 아닐까요?
+                                                </span>
                                             </p>
                                         </div>
                                     </div>
@@ -194,7 +221,23 @@ function About(){
                                     <p className="story-title-1 fontBonV">THAT’S MY</p>
                                     <p className="story-title-2 fontCoco">STORY</p>
                                 </h4>
-                                <div className="swiper-container mySwiper">
+                                <Swiper
+                                    className='swiper-container'
+                                    spaceBetween={10}
+                                    slidesPerView={4}
+                                    onSwiper={(swiper) => console.log(swiper)}
+                                    onSlideChange={() => console.log("slide change")}
+                                    >
+                                    <SwiperSlide><img src="/img/story3.jpg" alt="스토리1"/></SwiperSlide>
+                                    <SwiperSlide><img src="/img/story1.jpg" alt="스토리2"/></SwiperSlide>
+                                    <SwiperSlide><img src="/img/story2.jpg" alt="스토리3"/></SwiperSlide>
+                                    <SwiperSlide><img src="/img/story6.jpg" alt="스토리3"/></SwiperSlide>
+                                    <SwiperSlide><img src="/img/story5.jpg" alt="스토리3"/></SwiperSlide>
+                                    <SwiperSlide><img src="/img/story4.jpg" alt="스토리3"/></SwiperSlide>
+                                </Swiper>
+
+
+                                {/* <div className="swiper-container mySwiper">
                                     <div className="swiper-wrapper">
                                         <div className="swiper-slide">
                                             <img src="/img/story3.jpg" alt="스토리1"></img>
@@ -215,7 +258,9 @@ function About(){
                                             <img src="/img/story4.jpg" alt="스토리6"></img>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
+
+
                             </section>
                     </article>
                 {/* //메인 스토리 */}

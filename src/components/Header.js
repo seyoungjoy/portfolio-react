@@ -1,5 +1,6 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import { ReactComponent as Ellipse } from '../assets/img/nav-ellipse.svg';
 
 function Header({info}){
   return (
@@ -13,11 +14,26 @@ function Header({info}){
       </Link></h1>
       <nav>
         <ul>
-          <li><Link to ="/">ABOUT</Link></li>
-          <li><Link to ="/project">PROJECT</Link></li>
-          <li><Link to ="/movie">MOVIE</Link></li>
-          <li><Link to ="/youtube">YOUTUBE</Link></li>
-          <li><Link to ="/contact">CONTACT</Link></li>
+          <li className="nav-ellipse">
+            <Ellipse/>
+            <Link to ="/">ABOUT</Link>
+          </li>
+          <li className="nav-ellipse">
+            <Ellipse/>
+            <Link to ="/project">PROJECT</Link>
+          </li>
+          <li className="nav-ellipse">
+            <Ellipse/>
+            <Link to ="/movie">MOVIE</Link>
+          </li>
+          <li className="nav-ellipse">
+            <Ellipse/>
+            <Link to ="/youtube">YOUTUBE</Link>
+          </li>
+          <li className="nav-ellipse">
+            <Ellipse/>
+            <Link to ="/contact">CONTACT</Link>
+          </li>
         </ul>
       </nav>
       <div className="header-ham">

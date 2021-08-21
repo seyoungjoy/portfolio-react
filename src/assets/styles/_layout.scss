@@ -1,16 +1,16 @@
 /* font */
 .fontCavi{
     font-family: 'CaviarDreams';
-  }
+}
   .fontSun{
     font-family: 'Sunflower';
-  }
+}
   .fontBonV{
     font-family: 'Bon Voyage';
-  }
+}
   .fontCoco{
     font-family: 'Cocogoose';
-  }
+}
 
 
 // header
@@ -30,7 +30,6 @@
     box-sizing: border-box;
     background: transparent;
     color:#fff;
-
 }
 h1 a{
     color:#fff;
@@ -50,7 +49,6 @@ h1 a{
     position: absolute;
     bottom: -3px;
     right: 6px;
-
 }
 #header h1 .symbol img{
     width: 20px;
@@ -71,6 +69,38 @@ h1 a{
    z-index: 10;
    color:#fff;
 }
+
+#header nav .nav-ellipse{
+  position: relative;
+  transition: all 0.5s ease-out;
+}
+#header nav .nav-ellipse:hover{
+  transform: rotateZ(-7deg);
+  transition: all 0.3s ease-out;
+}
+.nav-ellipse svg{
+  width:auto;
+  height:40px;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.nav-ellipse svg path{
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition-property: stroke-dashoffset;
+  transition-duration: 0.5s;
+  transition-timing-function:cubic-bezier(0.7, 0, 0.3, 1);
+}
+.nav-ellipse:hover svg path{
+      stroke-dashoffset: 0;
+      transition-timing-function: cubic-bezier(0.8, 1, 0.7, 1);
+      transition-duration: 1s;
+}
+
+
 .header-ham{
     display:none;
 }
@@ -232,22 +262,22 @@ h1 a{
     display: inline-block;
     
   }
-  // .contact-cont a::after{
-  //   content:"";
-  //   display:block;
-  //   width:0%;
-  //   height:100%;
-  //   transition: all 0.5s cubic-bezier(.215, .61, .355, 1);
-  //   background: #fff;
-  //   position: absolute;
-  //   top:0;
-  //   right:0;
-  //   z-index: 50;
-  // }
-  // .contact-cont:hover a::after{
-  //   width:100%;
-  //   left:0;
-  // }
+  .contact-cont a::after{
+    content:"";
+    display:block;
+    width:0%;
+    height:100%;
+    transition: all 0.5s cubic-bezier(.215, .61, .355, 1);
+    background: #fff;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 50;
+  }
+  .contact-cont:hover a::after{
+    width:100%;
+    left:0;
+  }
   
   .contact-cont a{
     width:100%;
@@ -262,30 +292,22 @@ h1 a{
     position: relative;
     z-index: 100;
   }
-  // .contact-cont:hover .contact-more{
-  //   color:#000;
-  // }
-  .contact-cont .contact-arrow img{
+  .contact-cont:hover .contact-more{
+    color:#000;
+  }
+  
+  .contact-cont .contact-arrow{
     display: inline-block;
     width:112px;
     height:15px;
+    background: center / contain no-repeat url(../img/contact-arrow.svg);
     position: relative;
     z-index: 100;
     margin-top:1px;
   }
-  
-  // .contact-cont .contact-arrow{
-  //   display: inline-block;
-  //   width:112px;
-  //   height:15px;
-  //   background: center / contain no-repeat url(../img/contact-arrow.svg);
-  //   position: relative;
-  //   z-index: 100;
-  //   margin-top:1px;
-  // }
-  // .contact-cont:hover .contact-arrow{
-  //   background: center / contain no-repeat url(../img/contact-arrow-hover.svg);
-  // }
+  .contact-cont:hover .contact-arrow{
+    background: center / contain no-repeat url(../img/contact-arrow-hover.svg);
+  }
     
   
 
