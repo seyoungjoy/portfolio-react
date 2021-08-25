@@ -30,6 +30,8 @@
     box-sizing: border-box;
     background: transparent;
     color:#fff;
+    opacity: 0;
+    transform: translateY(50px);
 }
 h1 a{
     color:#fff;
@@ -138,16 +140,16 @@ h1 a{
     width:1px;
     height:250px;
     background: #fff;
-    // opacity: 0;
-    // transform: scaleY(0);
+    opacity: 0;
+    transform: scaleY(0);
     transform-origin: top;
 }
 .wrapTitle-title .tit{
     color:#fff;
     margin: -29px 11px;
     font-size: 16px;
-    // opacity: 0;
-    // transform: translateX(-30px);
+    opacity: 0;
+    transform: translateX(-30px);
 }
 .wrapTitle-intro{
     font-size: 6vw;
@@ -156,13 +158,13 @@ h1 a{
     margin: 9vh 0;
 }
 .wrapTitle-intro1{
-    // opacity: 0;
-    // transform: rotateZ(-25deg);
+    opacity: 0;
+    transform: rotateZ(-25deg);
     transform-origin: left;
 }
 .wrapTitle-intro2{
-    // opacity: 0;
-    // transform: rotateZ(-20deg);
+    opacity: 0;
+    transform: rotateZ(-20deg);
     transform-origin: left;
 }
 .wraptitle-cont{
@@ -185,23 +187,23 @@ h1 a{
     position: absolute;
     top:0;
     left:0;
-    // opacity: 0;
-    // transform: scale(0);
+    opacity: 0;
+    transform: scale(0);
     transform-origin: top;
 }
-// .wrapTitle-des1-1,
-// .wrapTitle-des1-2,
-// .wrapTitle-des1-3,
-// .wrapTitle-des1-4{
-//     opacity: 0;
-//     transform: translateX(-30px);
-// }
+.wrapTitle-des1-1,
+.wrapTitle-des1-2,
+.wrapTitle-des1-3,
+.wrapTitle-des1-4{
+    opacity: 0;
+    transform: translateX(-30px);
+}
 .wrapTitle-des2{
     position: relative;
     flex:0 0 50%;
     font-size: 1.1rem;
-    // opacity: 0;
-    // transform: translateX(-30px);
+    opacity: 0;
+    transform: translateX(-30px);
 }
 .wrapTitltArrow img{
     width: 29px;

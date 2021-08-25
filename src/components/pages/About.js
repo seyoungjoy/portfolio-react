@@ -2,15 +2,59 @@ import React from 'react';
 import Header from '../Header';
 import FooterContact from '../FooterContact';
 import Footer from '../Footer';
+import Loader from '../basics/Loader';
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
+import { gsap } from "gsap";
 
 
-function About(){
-    return (
-        <div id="wrap">
-            <Header info="none"/>
+class About extends React.Component {
+    state = {
+      isLoading: true,
+    };
+  
+    mainStart = () => {
+        let tl = gsap.timeline();
+        tl.to("#header", { duration: 0.3, stagger: 0.1, opacity: 1, y: 0, ease: "ease.out" });
+        tl.to(".screen-content-main > div:nth-child(1) > p:nth-child(1)", { duration: 0.3, stagger: 0.1, opacity: 1, rotationZ: 0, ease: "bounce.out" });
+        tl.to(".screen-content-main > div:nth-child(1) > p:nth-child(2)", { duration: 0.3, stagger: 0.1, opacity: 1, x: 0, ease: "ease.out" });
+        tl.to(".screen-content-main > div:nth-child(1) > p:nth-child(3)", { duration: 0.3, stagger: 0.1, opacity: 1, y: 0, ease: "ease.out" });
+        tl.to(".screen-content-main > div:nth-child(2) > p:nth-child(1)", { duration: 0.3, stagger: 0.1, opacity: 1, y: 0, ease: "bounce.out" });
+        tl.to(".screen-content-main > div:nth-child(2) > p:nth-child(2)", { duration: 0.3, stagger: 0.1, opacity: 1, x: 0, ease: "power4.out" });
+        tl.to(".screen-content-main > div:nth-child(2) > p:nth-child(3)", { duration: 0.3, stagger: 0.1, opacity: 1, scaleX: 1, ease: "ease.out" });
+        tl.to(".screen-content-main > div:nth-child(3) > p:nth-child(1)", { duration: 0.5, stagger: 0.1, opacity: 1, scaleX: 1, ease: "ease.out" });
+        tl.to(".screen-content-main > div:nth-child(3) > p:nth-child(2)", { duration: 0.3, stagger: 0.1, opacity: 1, skewX: 0, ease: "bounce.out" });
+        tl.to(".screen-content-main > div:nth-child(4) > p:nth-child(1)", { duration: 0.3, stagger: 0.1, opacity: 1, y: 0, ease: "bounce.out" });
+        tl.to(".screen-content-main > div:nth-child(4) > p:nth-child(2)", { duration: 0.3, stagger: 0.1, opacity: 1, x: 0, ease: "ease.out" });
+        tl.to(".screen-content-main > div:nth-child(4) > p:nth-child(3)", { duration: 0.3, stagger: 0.1, opacity: 1, scaleX: 1, ease: "ease.out" });
+        tl.to(".screen-line", { duration: 0.8, stagger: 0.1, opacity: 1, scaleY: 1, ease: "ease.out" });
+    };
+  
+    getSite = () => {
+      setTimeout(() => {
+        console.log("두번째 시작");
+        this.setState({ isLoading: false });
+        this.mainStart();
+      }, 1000);
+    };
+  
+    componentDidMount() {
+      setTimeout(() => {
+        console.log("첫번째 시작");
+        this.getSite();
+      }, 1000);
+    }
+  
+    render() {
+      const { isLoading } = this.state;
+      return (
+        <div id="wrap" className="lock">
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <>
+              <Header info="none"/>
             <main>
                 <section id="mainContent">
                 <h2 className="screen_out">메인 컨텐츠</h2>
@@ -235,45 +279,28 @@ function About(){
                                     <SwiperSlide><img src="/img/story5.jpg" alt="스토리3"/></SwiperSlide>
                                     <SwiperSlide><img src="/img/story4.jpg" alt="스토리3"/></SwiperSlide>
                                 </Swiper>
-
-
-                                {/* <div className="swiper-container mySwiper">
-                                    <div className="swiper-wrapper">
-                                        <div className="swiper-slide">
-                                            <img src="/img/story3.jpg" alt="스토리1"></img>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <img src="/img/story1.jpg" alt="스토리2"></img>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <img src="/img/story2.jpg" alt="스토리3"></img>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <img src="/img/story6.jpg" alt="스토리4"></img>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <img src="/img/story5.jpg" alt="스토리5"></img>
-                                        </div>
-                                        <div className="swiper-slide">
-                                            <img src="/img/story4.jpg" alt="스토리6"></img>
-                                        </div>
-                                    </div>
-                                </div> */}
-
-
                             </section>
                     </article>
                 {/* //메인 스토리 */}
                 </section>
             </main>
-            
             <FooterContact/>
             <Footer />
+            </>
+          )}
         </div>
-        
-    )
+      );
+    }
+  }
 
-}
+
+
+
+
+
+
+
+
 
 
 

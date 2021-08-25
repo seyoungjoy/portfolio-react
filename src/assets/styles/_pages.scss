@@ -39,16 +39,68 @@
   align-items: center;
   justify-content: center;
 }
+
 .screen-content-main>div>p{
   font-size: 5.3vw;
   color:#fff;
   display: inline-block;
   line-height: 1.1;
   margin:0 1vw;
+  opacity:0;
+  
+  
 }
 .screen-content-main>div>p.really{
   margin:0.9vw 1vw 0;
 }
+/* 메인 페이지 애니메이션 */
+/* 첫번째 줄 */
+.screen-content-main>div:nth-child(1)>p:nth-child(1){
+  
+  transform:rotateZ(-45deg);
+  transform-origin: left;
+}
+.screen-content-main>div:nth-child(1)>p:nth-child(2){
+  transform:translateX(100px);
+}
+.screen-content-main>div:nth-child(1)>p:nth-child(3){
+  transform:translateY(50px);
+}
+/* 두번째 줄 */
+.screen-content-main>div:nth-child(2)>p:nth-child(1){
+  transform:translateY(-100px);
+}
+.screen-content-main>div:nth-child(2)>p:nth-child(2){
+  transform: translateX(-200px);
+}
+.screen-content-main>div:nth-child(2)>p:nth-child(3){
+  transform:scaleX(2.5);
+}
+/* 세번째 줄 */
+.screen-content-main>div:nth-child(3)>p:nth-child(1){
+  transform:scaleX(2.5);
+}
+.screen-content-main>div:nth-child(3)>p:nth-child(2){
+  transform: skewX(100deg);
+}
+/* 네번째 줄 */
+.screen-content-main>div:nth-child(4)>p:nth-child(1){
+  transform:translateY(100px);
+}
+.screen-content-main>div:nth-child(4)>p:nth-child(2){
+  transform: translateX(-200px);
+}
+.screen-content-main>div:nth-child(4)>p:nth-child(3){
+  transform:scaleX(2);
+  transform-origin: left;
+}
+
+
+
+
+
+
+
 .mainLogo{
   position: relative;
 }
@@ -86,7 +138,8 @@
   position: absolute;
   bottom:0;
   left:50%;
-  transform: translateX(-50%) scaleY(1);
+  opacity: 0;
+  transform: translateX(-50%) scaleY(0);
   transform-origin: top;
 }
 
@@ -455,8 +508,8 @@ input[type=search]{
 }
 .nav{   
   position: relative;
-  // opacity: 0;
-  // transform: translateX(-200px);
+  opacity: 0;
+  transform: translateX(-200px);
 }
 .highlight{
   position: absolute;
@@ -581,16 +634,16 @@ input[type=search]{
   font-size: 3vw;
   flex:0 0 60%;
 }
-.project1 .tit,
-.project2 .tit,
-.project3 .tit,
-.project4 .tit,
-.project5 .tit,
-.project6 .tit,
-.project7 .tit{
-  // opacity: 0;
-  // transform: translateX(-100px);
-}
+// .project1 .tit,
+// .project2 .tit,
+// .project3 .tit,
+// .project4 .tit,
+// .project5 .tit,
+// .project6 .tit,
+// .project7 .tit{
+//   opacity: 0;
+//   transform: translateX(-100px);
+// }
 .project ul .project4{
   display: none;
 }
@@ -664,16 +717,7 @@ input[type=search]{
   // opacity: 0;
   // transform: translateX(100px);
 }
-.project1 .mockup::after{
-  content: "";
-  display: block;
-  width: 7px;
-  height: 100%;
-  position: absolute;
-  top: 0%;
-  right: -1px;
-  background: #fff;
-}
+
 
 .project li .mockup img{
   width: 100%;

@@ -2,14 +2,54 @@ import React from 'react';
 import Header from '../Header';
 import FooterContact from '../FooterContact';
 import Footer from '../Footer';
+import Loader from '../basics/Loader';
 import { Link } from "react-router-dom";
+import { gsap } from "gsap";
 
 
-
-
-function Youtube(){
-    return (
-        <>
+class Youtube extends React.Component {
+    state = {
+      isLoading: true,
+    };
+  
+    mainStart = () => {
+        let tl = gsap.timeline();
+        tl.to("#header", { duration: 0.3, stagger: 0.1, opacity: 1, y: 0, ease: "ease.out" });
+        tl.to(".wrapTitle-line", { duration: 0.3, stagger: 0.1, opacity: 1, scaleY: 1, ease: "ease.out" });
+        tl.to(".wrapTitle-title .tit", { duration: 0.3, stagger: 0.1, opacity: 1, x: 0, ease: "bounce.out" });
+        tl.to(".wrapTitle-intro1", { opacity: 1, rotationZ: 0, duration: 0.5, ease: "bounce.out" });
+        tl.to(".wrapTitle-intro2", { opacity: 1, rotationZ: 0, duration: 0.5, stagger: 0.1, ease: "bounce.out" },"-=0.2");
+        tl.to(".wrapTitle-des1-line", { duration: 0.3, stagger: 0.1, opacity: 1, scale: 1, ease: "ease.out" });
+        tl.to(".wrapTitle-des1-1", { duration: 0.3, stagger: 0.1, opacity: 1, x: 0, ease: "ease.out" });
+        tl.to(".wrapTitle-des1-2", { duration: 0.3, stagger: 0.1, opacity: 1, x: 0, ease: "ease.out" },"-=0.12");
+        tl.to(".wrapTitle-des1-3", { duration: 0.3, stagger: 0.1, opacity: 1, x: 0, ease: "ease.out" },"-=0.12");
+        tl.to(".wrapTitle-des1-4", { duration: 0.3, stagger: 0.1, opacity: 1, x: 0, ease: "ease.out" },"-=0.12");
+        tl.to(".wrapTitle-des2", { duration: 0.3, stagger: 0.1, opacity: 1, x: 0, ease: "ease.out" });
+    };
+  
+    getSite = () => {
+      setTimeout(() => {
+        console.log("두번째 시작");
+        this.setState({ isLoading: false });
+        this.mainStart();
+      }, 1000);
+    };
+  
+    componentDidMount() {
+      setTimeout(() => {
+        console.log("첫번째 시작");
+        this.getSite();
+      }, 1000);
+    }
+  
+    render() {
+      const { isLoading } = this.state;
+      return (
+        <div id="wrap" className="lock">
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <>
             <Header />
             {/* wraptitle */}
             <section id="wrapTitle-section">
@@ -63,55 +103,8 @@ function Youtube(){
                             </div>
                         </div>
                     </div>
-                    <div class="youtube-video-search">
-                        <input type="search" id="video-search" name="q" aria-label="Search video"
-                            placeholder="원하는 영상을 검색해 보세요."></input>
-                        <button class="search-btn">
-                            <i class='bx bx-search-alt-2'></i>
-                        </button>
-                    </div>
                     <div class="youtube-video-cont">
-
-                        <div class="youtube-video-list">
-                            <ul>
-                                <li>
-                                    <div class="video"></div>
-                                    <div class="video-tit">VIDEO TITLE</div>
-                                </li>
-                                <li>
-                                    <div class="video"></div>
-                                    <div class="video-tit">VIDEO TITLE</div>
-                                </li>
-                                <li>
-                                    <div class="video"></div>
-                                    <div class="video-tit">VIDEO TITLE </div>
-                                </li>
-                                <li>
-                                    <div class="video"></div>
-                                    <div class="video-tit">VIDEO TITLE </div>
-                                </li>
-                                <li>
-                                    <div class="video"></div>
-                                    <div class="video-tit">VIDEO TITLE </div>
-                                </li>
-                                <li>
-                                    <div class="video"></div>
-                                    <div class="video-tit">VIDEO TITLE </div>
-                                </li>
-                                <li>
-                                    <div class="video"></div>
-                                    <div class="video-tit">VIDEO TITLE </div>
-                                </li>
-                                <li>
-                                    <div class="video"></div>
-                                    <div class="video-tit">VIDEO TITLE </div>
-                                </li>
-                                <li>
-                                    <div class="video"></div>
-                                    <div class="video-tit">VIDEO TITLE </div>
-                                </li>
-                            </ul>
-                        </div>
+                        <p><Link to="/YoutubeAPI" target="_blank">유뷰트 보기</Link></p>
                     </div>
                 </article>
             </section>
@@ -119,12 +112,12 @@ function Youtube(){
             
             <FooterContact/>
             <Footer />
-        </>
-        
-    )
-
-}
-
+            </>
+          )}
+        </div>
+      );
+    }
+  }
 
 
 export default Youtube;
