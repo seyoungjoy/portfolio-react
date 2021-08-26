@@ -442,58 +442,8 @@ input[type=search] {
   position: relative;
   margin:17vh 0;
 }
-
-.movie-tit{
-  font-size: 3vw;
-  margin: 9vh 0 5vh;
-  line-height: 2rem;
-  text-align: center;
-  // opacity: 0;
-  // transform: translateY(-50px);
-}
-.movie-tit p:last-child{
-  font-size: 1rem;
-  color:#555;
+.movie-cont img{
   
-}
-.movie-search{
-  width: 350px;
-  border: 1px solid #000;
-  border-radius: 4px;
-  display: flex;
-  justify-content: space-between;
-  padding: 4px 4px 4px 15px;
-  // opacity: 0;
-  // transform: translateY(-50px);
-  position: absolute;
-  top:0;
-  right:0;
-}
-input[type=search]{
-  border: none;
-  width: 400px;
-  outline: none;
-  font-size: 14px;
-}
-// .movie-list{
-//   opacity: 0;
-//   transform: translateY(-50px);
-// }
-.movie-list ul{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content:space-between;
-}
-.movie-list li{
-  flex: 0 0 18%;
-  margin-bottom:5vh
-}
-.movie-list li .movie-poster{
-  width:100%;
-  height:0;
-  padding-bottom: 140%;
-  background: #000;
-  margin-bottom:1vh
 }
 
 

@@ -20,15 +20,16 @@ function Header({info}){
           </li>
           <li className="nav-ellipse">
             <Ellipse/>
-            <Link to ="/project">PROJECT</Link>
-          </li>
-          <li className="nav-ellipse">
-            <Ellipse/>
             <Link to ="/movie">MOVIE</Link>
+
           </li>
           <li className="nav-ellipse">
             <Ellipse/>
             <Link to ="/youtube">YOUTUBE</Link>
+          </li>
+          <li className="nav-ellipse">
+            <Ellipse/>
+            <Link to ="/project">PROJECT</Link>
           </li>
           <li className="nav-ellipse">
             <Ellipse/>
