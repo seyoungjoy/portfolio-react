@@ -105,7 +105,7 @@ class Movie extends React.Component {
                             </div>
                         </div>
                         <div className="movie-cont">
-                            <Link to="/"><img src="/img/movieApi.png"></img></Link>
+                            <a href="https://youngsmovie.web.app/" target="_blank"><img src="/img/movieApi.png"></img></a>
                         </div>
                     </article>
                 </section>

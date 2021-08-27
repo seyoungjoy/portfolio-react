@@ -24,7 +24,6 @@ class Project extends React.Component {
         tl.to(".wrapTitle-des1-3", { duration: 0.3, stagger: 0.1, opacity: 1, x: 0, ease: "ease.out" },"-=0.12");
         tl.to(".wrapTitle-des1-4", { duration: 0.3, stagger: 0.1, opacity: 1, x: 0, ease: "ease.out" },"-=0.12");
         tl.to(".wrapTitle-des2", { duration: 0.3, stagger: 0.1, opacity: 1, x: 0, ease: "ease.out" });
-        tl.to(".nav", { duration: 1, stagger: 0.1, opacity: 1, x: 0, ease: "ease.out" });
 
     };
   
@@ -86,23 +85,6 @@ class Project extends React.Component {
                     <article className="project-article">
                         <h4 className="screen_out">project 본문 영역</h4>
                         <div className="tab-wrapper">
-                            <div className="nav">
-                                <ul className="tab-menu">
-                                    <li>
-                                        <img src="/img/tabimage1.jpg" alt="웹사이트"></img>
-                                        <Link to="#website">WEB SITE</Link>
-                                    </li>
-                                    <li>
-                                        <img src="/img/tabimage2.jpg" alt="웹사이트"></img>
-                                        <Link to="#script">SCRIPT</Link>
-                                    </li>
-                                    <li>
-                                        <img src="/img/tabimage3.jpg" alt="웹사이트"></img>
-                                        <Link to="#animation">ANIMATION</Link>
-                                    </li>
-                                </ul>
-                                <span className="highlight"></span>
-                            </div>
                             <div className="tab-content">
                                 <div id="website">
                                     <div className="project-subtit">
@@ -137,12 +119,12 @@ class Project extends React.Component {
                                                         </span>
                                                     </p>
                                                     <p className="view">
-                                                        <Link to="https://seyoungjoy.github.io/portfolio/port/" target="_blank">
+                                                        <a href="https://seyoungjoy.github.io/portfolio/port/" target="_blank">
                                                             <span className="view-text">VIEW SITE</span>
                                                             <span className="view-arrow">
                                                                 <img src="/img/project-arrow.svg"></img>
                                                             </span>
-                                                        </Link>
+                                                        </a>
                                                     </p>
                                                 </div>
                                                 <div className="mockup">
@@ -159,12 +141,12 @@ class Project extends React.Component {
                                                         </span>
                                                     </p>
                                                     <p className="view">
-                                                        <Link to="https://youngsvue.web.app/" target="_blank">
+                                                        <a href="https://youngsvue.web.app/" target="_blank">
                                                             <span className="view-text">VIEW SITE</span>
                                                             <span className="view-arrow">
                                                                 <img src="/img/project-arrow.svg"></img>
                                                             </span>
-                                                        </Link>
+                                                        </a>
                                                     </p>
                                                 </div>
                                                 <div className="mockup">
@@ -181,12 +163,12 @@ class Project extends React.Component {
                                                         </span>
                                                     </p>
                                                     <p className="view">
-                                                        <Link to="http://fejoy95.dothome.co.kr/php/pages/main.php" target="_blank">
+                                                        <a href="http://fejoy95.dothome.co.kr/php/pages/main.php" target="_blank">
                                                             <span className="view-text">VIEW SITE</span>
                                                             <span className="view-arrow">
                                                                 <img src="/img/project-arrow.svg"></img>
                                                             </span>
-                                                        </Link>
+                                                        </a>
                                                     </p>
                                                 </div>
                                                 <div className="mockup">
@@ -203,13 +185,13 @@ class Project extends React.Component {
                                                         </span>
                                                     </p>
                                                     <p className="view">
-                                                        <Link to="https://seyoungjoy.github.io/portfolio/port/project/project5/"
+                                                        <a href="https://seyoungjoy.github.io/portfolio/port/project/project5/"
                                                             target="_blank">
                                                             <span className="view-text">VIEW SITE</span>
                                                             <span className="view-arrow">
                                                                 <img src="/img/project-arrow.svg"></img>
                                                             </span>
-                                                        </Link>
+                                                        </a>
                                                     </p>
                                                 </div>
                                                 <div className="mockup">
@@ -226,12 +208,12 @@ class Project extends React.Component {
                                                         </span>
                                                     </p>
                                                     <p className="view">
-                                                        <Link to="https://seyoungjoy.github.io/portfolio/port/project/project6/" target="_blank">
+                                                        <a href="https://seyoungjoy.github.io/portfolio/port/project/project6/" target="_blank">
                                                             <span className="view-text">VIEW SITE</span>
                                                             <span className="view-arrow">
                                                                 <img src="/img/project-arrow.svg"></img>
                                                             </span>
-                                                        </Link>
+                                                        </a>
                                                     </p>
                                                 </div>
                                                 <div className="mockup">
@@ -248,13 +230,13 @@ class Project extends React.Component {
                                                         </span>
                                                     </p>
                                                     <p className="view">
-                                                        <Link to="https://seyoungjoy.github.io/portfolio/port/project/project7/"
+                                                        <a href="https://seyoungjoy.github.io/portfolio/port/project/project7/"
                                                             target="_blank">
                                                             <span className="view-text">VIEW SITE</span>
                                                             <span className="view-arrow">
                                                                 <img src="/img/project-arrow.svg"></img>
                                                             </span>
-                                                        </Link>
+                                                        </a>
                                                     </p>
                                                 </div>
                                                 <div className="mockup">

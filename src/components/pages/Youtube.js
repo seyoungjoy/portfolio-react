@@ -104,7 +104,9 @@ class Youtube extends React.Component {
                         </div>
                     </div>
                     <div class="youtube-video-cont">
-                        <p><Link to="/YoutubeAPI" target="_blank">유뷰트 보기</Link></p>
+                        <p>
+                          <a href="https://youngs-you-tube.web.app/" target="_blank"><img src="/img/youtubeApi.png"></img></a>
+                        </p>
                     </div>
                 </article>
             </section>

@@ -120,11 +120,11 @@ class About extends React.Component {
                                     일은 센스있게, 코딩은 깔끔하게, 배움은 열정적으로 하겠습니다.
                                 </p>
                                 <p className="notice">
-                                    ※ 저의 포트폴리오는 반응형으로 제작했습니다. 태블릿, 스마트폰에서 보셔도 편하게 감상하실 수 있습니다.<br/>
-                                    ※ 본 사이트는 리액트로 다시 제작중입니다. 기대해주세요 :)
+                                    ※ 리액트로 제작된 웹사이트 입니다 :) <br/>
+                                    ※ Movie, Youtube 메뉴에서 API를 들고와 만든 웹을 확인하실 수 있습니다.
 
                                 </p>
-                                <p className="contactY"><Link to="/contact">CONTACT YOUNG</Link></p>
+                                
                             </div>
                             <div className="introduceTab">
                                 <div className="row">

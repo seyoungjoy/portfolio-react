@@ -94,13 +94,6 @@
   transform:scaleX(2);
   transform-origin: left;
 }
-
-
-
-
-
-
-
 .mainLogo{
   position: relative;
 }
@@ -184,14 +177,15 @@
   // transform: translateY(50px);
 }
 .introduce p:last-child{
+  color:#555;
   margin-top:3vh;
-  font-size: 2vw;
-  text-decoration: underline;
+  font-size: 1.5rem;
   // opacity: 0;    
   // transform: translateY(50px);
 }
+
 .contactY a{
-  font-family: 'Cocogoose';
+  font-family: 'NEXON Lv1 Gothic OTF';
 }
 .introduceTab{
   position: relative;
@@ -305,11 +299,6 @@
   left:-36px;
 }
 
-.notice{
-  color:#555;
-  text-decoration: underline;
-  margin-top:1.5vh;
-}
 
 // 메인 스토리
 .story-article{
@@ -442,16 +431,9 @@ input[type=search] {
   position: relative;
   margin:17vh 0;
 }
-.movie-cont img{
-  
-}
-
 
 /* project */
-#project-section{
-  padding:10vh 0;
-  margin-top: -160px;
-}
+
 .project-article{
   width:75%;
   margin:0 auto;
@@ -753,8 +735,8 @@ input[type=search] {
 }
 .contact-main{
   position: relative;
-  // opacity: 0;
-  // transform: scale(0);
+  opacity: 0;
+  transform: scale(0);
 }
 .contact-main .contact-text{
   position: absolute;
@@ -782,12 +764,12 @@ input[type=search] {
       1px 10px 1px #414141;
 }
 .contact-sub p:nth-child(1){
-  // opacity:0;
-  // transform: translateY(-100px);
+  opacity:0;
+  transform: translateY(-100px);
 }
 .contact-sub p:nth-child(2){
-  // opacity:0;
-  // transform: translateY(-100px);
+  opacity:0;
+  transform: translateY(-100px);
 }
 .contact-sub{
   color:#fff;
