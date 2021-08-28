@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../Header';
+import WrapTitle from '../basics/WrapTitle';
 import FooterContact from '../FooterContact';
 import Footer from '../Footer';
 import Loader from '../basics/Loader';
@@ -51,33 +52,14 @@ class Project extends React.Component {
           ) : (
             <>
                 <Header />
-                {/* wraptitle */}
-                <section id="wrapTitle-section">
-                    <div className="wrapTitle-wrap">
-                        <h3 className="wrapTitle-title">
-                            <span className="wrapTitle-line"></span>
-                            <p className="tit">PROJECT</p>
-                        </h3>
-                        <div className="wrapTitle-intro">
-                            <p className="wrapTitle-intro1 fontBonV">THAT’S MY</p>
-                            <p className="wrapTitle-intro2 fontCoco">PROJECT</p>
-                        </div>
-                        <div className="wraptitle-cont">
-                            <div className="wrapTitle-des1">
-                                <span className="wrapTitle-des1-line"></span>
-                                <p className="wrapTitle-des1-1">WEBSITE</p>
-                                <p className="wrapTitle-des1-2">JAVASCRIPT</p>
-                                <p className="wrapTitle-des1-3">ANIMATION</p>
-                                <p className="wrapTitle-des1-4">PROJECT</p>
-                            </div>
-                            <div className="wrapTitle-des2">
-                                <span className="wrapTitltArrow"><img src="/img/wraptitle_arrow.svg"></img></span>
-                                <span>WEBSITE, VANILLA JAVASCRIPT, CSS ANIMATION 작업물들을 감상해주세요! 아래 세가지 탭 메뉴를 클릭해 주시면 감사하겠습니다:)</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {/* //wraptitle */}
+                <WrapTitle 
+                  title="MOPROJECTVIE" 
+                  desc1="WEBSITE" 
+                  desc2="JAVASCRIPT" 
+                  desc3="ANIMATION" 
+                  desc4="PROJECT"
+                  mainDesc="WEBSITE, VANILLA JAVASCRIPT, CSS ANIMATION 작업물들을 감상해주세요! 아래 세가지 탭 메뉴를 클릭해 주시면 감사하겠습니다:)"
+                />
 
                 {/* project */}
                 <section id="project-section">

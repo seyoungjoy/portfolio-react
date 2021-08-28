@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from '../Header';
+import WrapTitle from '../basics/WrapTitle';
 import FooterContact from '../FooterContact';
 import Footer from '../Footer';
 import Loader from '../basics/Loader';
@@ -52,33 +53,14 @@ class Movie extends React.Component {
           ) : (
             <>
                 <Header />
-                {/* wraptitle */}
-                <section id="wrapTitle-section">
-                    <div className="wrapTitle-wrap">
-                        <h3 className="wrapTitle-title">
-                            <span className="wrapTitle-line"></span>
-                            <p className="tit">MOVIE</p>
-                        </h3>
-                        <div className="wrapTitle-intro">
-                            <p className="wrapTitle-intro1 fontBonV">THAT’S MY</p>
-                            <p className="wrapTitle-intro2 fontCoco">MOVIE</p>
-                        </div>
-                        <div className="wraptitle-cont">
-                            <div className="wrapTitle-des1">
-                                <span className="wrapTitle-des1-line"></span>
-                                <p className="wrapTitle-des1-1">SEARCH</p>
-                                <p className="wrapTitle-des1-2">FUNCTION</p>
-                                <p className="wrapTitle-des1-3">USING</p>
-                                <p className="wrapTitle-des1-4">YOUTUBE API</p>
-                            </div>
-                            <div className="wrapTitle-des2">
-                                <span className="wrapTitltArrow"><img src="/img/wraptitle_arrow.svg"></img></span>
-                                <span>유튜브 api를 이용해서 동영상을 검색할 수 있게 만들었습니다.유튜브 api를 이용해서 동영상을 검색할 수 있게 만들었습니다.</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                {/* //wraptitle */}
+                <WrapTitle 
+                  title="MOVIE" 
+                  desc1="SEARCH" 
+                  desc2="FUNCTION" 
+                  desc3="USING" 
+                  desc4="MOVIE API"
+                  mainDesc="Movie API를 respond해 인기 영화목록을 불러와 검색할 수 있도록 작업했습니다."
+                />
 
                 {/* Movie */}
                 <section id="movie-section">
