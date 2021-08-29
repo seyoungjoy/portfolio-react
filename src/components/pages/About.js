@@ -8,7 +8,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper.scss';
 import { gsap } from "gsap";
 
-
 class About extends React.Component {
     state = {
       isLoading: true,
@@ -92,16 +91,7 @@ class About extends React.Component {
                         <h3 className="screen_out">메인 소개</h3>
                         <section className="about-cont">
                             <h4 className="screen_out">메인 소개 페이지</h4>
-                            <div className="flow-letter">
-                                <p className="right fontCavi">
-                                    FRONT END DEVELOPMENT 
-                                    <span className="fontCoco aboutSymbol">YOUNG</span>
-                                </p>
-                                <p className="left fontCavi">
-                                    FRONT END DEVELOPMENT
-                                    <span className="fontCoco aboutSymbol">YOUNG</span>
-                                </p>
-                            </div>
+                           
                             <div className="introduce">
                                 <p>
                                     안녕하세요. 다양하고 멋진 효과들을 구현해내고 싶은 프론트엔드 개발자 양세영입니다.
@@ -121,10 +111,8 @@ class About extends React.Component {
                                 </p>
                                 <p className="notice">
                                     ※ 리액트로 제작된 웹사이트 입니다 :) <br/>
-                                    ※ Movie, Youtube 메뉴에서 API를 들고와 만든 웹을 확인하실 수 있습니다.
-
+                                    ※ Movie, Youtube 메뉴에서 API를 들고와 만든 앱을 확인하실 수 있습니다.
                                 </p>
-                                
                             </div>
                             <div className="introduceTab">
                                 <div className="row">
@@ -292,16 +280,5 @@ class About extends React.Component {
       );
     }
   }
-
-
-
-
-
-
-
-
-
-
-
 
 export default About;

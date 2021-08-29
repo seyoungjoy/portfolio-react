@@ -7,7 +7,6 @@ class Contact extends React.Component {
     state = {
       isLoading: true,
     };
-  
     mainStart = () => {
         let tl = gsap.timeline();
         tl.to("#header", { duration: 0.4, stagger: 0.1, opacity: 1, y: 0, ease: "ease.out" });
