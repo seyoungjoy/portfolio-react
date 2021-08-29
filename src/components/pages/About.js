@@ -35,7 +35,7 @@ class About extends React.Component {
         console.log("두번째 시작");
         this.setState({ isLoading: false });
         this.mainStart();
-      }, 1000);
+      }, 2000);
     };
   
     componentDidMount() {
